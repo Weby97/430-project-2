@@ -21,11 +21,11 @@ const NoteSchema = new mongoose.Schema({
     required: true,
   },
 
-//   owner: {
-//     type: mongoose.Schema.ObjectId,
-//     required: true,
-//     ref: 'Account',
-//   },
+  //   owner: {
+  //     type: mongoose.Schema.ObjectId,
+  //     required: true,
+  //     ref: 'Account',
+  //   },
 
   createdDate: {
     type: Date,
@@ -47,11 +47,10 @@ NoteSchema.statics.findByOwner = (ownerId, callback) => {
 };
 
 NoteSchema.statics.findRandom = (callback) => {
-    // aggregate with $sample size of 1 allows us to pick a random document from our collection!
-    return NoteModel.aggregate([{ $sample: {size: 1} }]).exec(callback);
-}
+  // aggregate with $sample size of 1 allows us to pick a random document from our collection!
+  NoteModel.aggregate([{ $sample: { size: 1 } }]).exec(callback);
 
-NoteModel = mongoose.model('Note', NoteSchema);
-
+  NoteModel = mongoose.model('Note', NoteSchema);
+};
 module.exports.NoteModel = NoteModel;
 module.exports.NoteSchema = NoteSchema;

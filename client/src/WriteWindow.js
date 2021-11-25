@@ -24,13 +24,17 @@ function WriteWindow () {
         fetch('/write', requestOptions)
             .then((response) => {
                 if(!response.ok) throw new Error(response.status);
-                else return response.json();
+                else {
+                    return response.json();
+                }
             })
             .then((data) => {
-                console.log(data.status);
+                // console.log(data.status);
                 document.querySelector('#successMessage').innerHTML = data.status;
             })
-            .catch((error) => console.log('Form submit error', error));
+            .catch((error) => {
+                console.log('Form submit error', error);
+            });
     }
     //render() {
         return (

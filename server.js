@@ -37,7 +37,8 @@ app.get('/',  (req, res) => {
 
 // for any request that doesn't match one above, send back React's index.html file
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/server/views/index.html'));
+    //res.sendFile(path.join(__dirname+'/server/views/index.html'));
+    res.render('app');
 });
 
 app.listen(port, () => {

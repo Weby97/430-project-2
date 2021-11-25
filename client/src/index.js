@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Message from './Message';
+import Nav from './Nav';
+import Music from './Music';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Nav />
+    <Message />
+    <Music />
   </React.StrictMode>,
   document.getElementById('root')
 );

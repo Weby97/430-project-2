@@ -1,0 +1,34 @@
+#message {
+    margin: 1em;
+}
+
+#randomNote {
+    font-size: 20px;
+    border: 3px solid black;
+    padding: 1rem;
+    display: inline-block;
+}
+
+footer {
+    margin: 1em;
+}
+
+nav {
+    background-color: #2097b4;
+}
+
+nav button {
+    background-color: #2097b4;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+nav button:hover {
+    color: rgb(0, 0, 0);
+}

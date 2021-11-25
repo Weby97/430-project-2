@@ -16,7 +16,9 @@ function ReadWindow () {
             .then((data) => {
                 document.querySelector('#randomNote').innerHTML = `"<b>${data.note[0].note}"</b></br> - ${data.note[0].name}`;
             })
-            .catch((error) => console.log('Message grab error', error))
+            .catch((error) => {
+                console.log('Message grab error', error);
+            });
     }
     return (
         <main>

@@ -32,8 +32,9 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.get('/getRandom', controllers.Note.getRandom);
 app.post('/write', controllers.Note.make);
 app.get('/',  (req, res) => {
-  res.sendFile(path.join(__dirname+'/server/views/index.html'));
+  res.render('app');
 });
+
 // for any request that doesn't match one above, send back React's index.html file
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/server/views/index.html'));

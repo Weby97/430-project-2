@@ -30,7 +30,7 @@ function WriteWindow () {
                 console.log(data.status);
                 document.querySelector('#successMessage').innerHTML = data.status;
             })
-            .catch((error) => console.log('Form submit error', error))
+            .catch((error) => console.log('Form submit error', error));
     }
     //render() {
         return (
